@@ -5,9 +5,10 @@ phases:
       dotnet: 8.0
   build:
     commands:
+      - cd AWSCodePipelineDemo
       - dotnet restore
       - dotnet publish -c Release -o ./publish
 artifacts:
   files:
     - '**/*'
-  base-directory: publish
+  base-directory: AWSCodePipelineDemo/publish
